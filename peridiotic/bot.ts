@@ -12,7 +12,7 @@ const PTBot = new Bot(Deno.env.get("BOT_TOKEN") || "");
 PTBot.command("start", async (ctx) => {
 	await ctx.reply(
 		`
-Hey, I'm <b>Periodic table bot ⚛</b>!
+Hey, I'm <b>Periodic spell bot ⚛</b>!
         
 I will congratulate you if your message can be spelled using elements of the perdiodic table.
     `,
@@ -83,7 +83,7 @@ PTBot.on("message", async (ctx) => {
 
 	if (does_it) {
 		await ctx.reply(
-			`<b>+1 Charma 🧬!</b> \nYour message can be splelled using periodic table elements. \n\n<code>${does_it}</code>`,
+			`<b>+1 Charma 🧬!</b> \nYour message can be spelled using periodic table elements. \n\n<code>${does_it}</code>`,
 			{ parse_mode: "HTML" },
 		);
 		await increment_charma(user_id);
